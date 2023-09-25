@@ -43,10 +43,11 @@ jobs:
           ruby-version: 3.2.2
 
       - name: rubocop
-        uses: reviewdog/action-rubocop@a434f50eaae1589b90edcb14cabf70555571577a # v1.11.0
+        uses: reviewdog/action-rubocop@e70b014b8062c447d6b515ee0209f834ea93e696 #v2.5.0
         with:
           rubocop_version: gemfile
-          rubocop_extensions: rubocop-performance rubocop-rspec
+          rubocop_extensions: rubocop-performance:gemfile rubocop-rspec:gemfile
           github_token: ${{ secrets.github_token }}
           filter_mode: file
           fail_on_error: true
+          use_bundler: true
