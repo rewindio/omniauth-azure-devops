@@ -46,7 +46,8 @@ Metrics/PerceivedComplexity:
   Enabled: false
 
 # Naming cop configuration
-
+Naming/FileName:
+  Enabled: false
 Naming/MethodParameterName:
   Enabled: true
   Exclude:
@@ -76,6 +77,12 @@ RSpec/MultipleMemoizedHelpers:
   Enabled: false
 RSpec/NestedGroups:
   Max: 5
+RSpec/VerifiedDoubleReference:
+  Enabled: false
+RSpec/FilePath:
+  Enabled: false
+RSpec/SpecFilePathFormat:
+  Enabled: false
 
 # Style cop configuration
 Style/ArgumentsForwarding:
