@@ -13,11 +13,12 @@ Gem::Specification.new do |gem|
   gem.homepage      = 'https://github.com/rewind/omniauth-azure-devops'
   gem.license       = 'MIT'
   gem.metadata = {
+    'rubygems_mfa_required' => 'true',
     'bug_tracker_uri' => "#{gem.homepage}/issues",
     'changelog_uri' => "#{gem.homepage}/blob/main/CHANGELOG.md",
     'documentation_uri' => gem.homepage.to_s,
     'homepage_uri' => gem.homepage.to_s,
-    'source_code_uri' => gem.homepage.to_s,
+    'source_code_uri' => gem.homepage.to_s
   }
 
   gem.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(spec|.github|examples)/}) }
@@ -29,6 +30,4 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'omniauth', '>= 1', '< 3'
   gem.add_runtime_dependency 'omniauth-oauth2'
-
-  gem.metadata['rubygems_mfa_required'] = 'true'
 end
