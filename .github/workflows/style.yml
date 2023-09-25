@@ -41,7 +41,6 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2.2
-          bundler-cache: true
 
       - name: rubocop
         uses: reviewdog/action-rubocop@e70b014b8062c447d6b515ee0209f834ea93e696 #v2.5.0
