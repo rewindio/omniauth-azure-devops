@@ -46,7 +46,7 @@ jobs:
         uses: reviewdog/action-rubocop@a434f50eaae1589b90edcb14cabf70555571577a # v1.11.0
         with:
           rubocop_version: gemfile
-          rubocop_extensions: rubocop-performance
+          rubocop_extensions: rubocop-performance rubocop-rspec
           github_token: ${{ secrets.github_token }}
           filter_mode: file
           fail_on_error: true
