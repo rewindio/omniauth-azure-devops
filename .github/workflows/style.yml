@@ -50,4 +50,3 @@ jobs:
           github_token: ${{ secrets.github_token }}
           filter_mode: file
           fail_on_error: true
-          use_bundler: true
