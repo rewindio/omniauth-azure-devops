@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require File.expand_path('lib/omniauth-azure-devops/version', __dir__)
+require File.expand_path('lib/omni_auth/azure_devops/version', __dir__)
 
 Gem::Specification.new do |gem|
   gem.name          = 'omniauth-azure-devops'
-  gem.version       = Omniauth::AzureDevops::VERSION
+  gem.version       = OmniAuth::AzureDevops::VERSION
   gem.authors       = ['Rewind Software Inc. | Parth Chandgadhiya']
   gem.email         = ['team@rewind.io']
 

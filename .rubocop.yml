@@ -46,8 +46,8 @@ Metrics/PerceivedComplexity:
   Enabled: false
 
 # Naming cop configuration
-Naming/FileName:
-  Enabled: false
+#Naming/FileName:
+#  Enabled: false
 Naming/MethodParameterName:
   Enabled: true
   Exclude:
@@ -80,9 +80,11 @@ RSpec/NestedGroups:
 RSpec/VerifiedDoubleReference:
   Enabled: false
 RSpec/FilePath:
-  Enabled: false
+  Exclude:
+    - spec/omni_auth/azure_devops/version_spec.rb
 RSpec/SpecFilePathFormat:
-  Enabled: false
+  Exclude:
+    - spec/omni_auth/azure_devops/version_spec.rb
 
 # Style cop configuration
 Style/ArgumentsForwarding:
