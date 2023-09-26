@@ -29,5 +29,5 @@ Gem::Specification.new do |gem|
   gem.required_ruby_version = '>= 3.2'
 
   gem.add_runtime_dependency 'omniauth', '>= 1', '< 3'
-  gem.add_runtime_dependency 'omniauth-oauth2', '~> 1.8.0'
+  gem.add_runtime_dependency 'omniauth-oauth2', '~> 1.1'
 end
