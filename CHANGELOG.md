@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.2]
+
+- Publish new Gem Version with CI
+
 ## [1.1.1]
 
 - Build Gem with ruby 3.2.2 and remove mfa for gem publishing CD
