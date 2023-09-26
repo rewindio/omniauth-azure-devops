@@ -46,8 +46,6 @@ Metrics/PerceivedComplexity:
   Enabled: false
 
 # Naming cop configuration
-#Naming/FileName:
-#  Enabled: false
 Naming/MethodParameterName:
   Enabled: true
   Exclude:
@@ -122,4 +120,8 @@ Style/NumericPredicate:
 Style/RedundantSelf:
   Enabled: true
 Style/RescueStandardError:
+  Enabled: false
+
+# Gem Spec cop configuration
+Gemspec/RequireMFA:
   Enabled: false
