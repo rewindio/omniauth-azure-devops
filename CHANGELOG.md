@@ -1,8 +1,12 @@
 # Changelog
 
+## [1.1.3]
+
+- Update the CD to look for version file in all sub-folders 
+
 ## [1.1.2]
 
-- Publish new Gem Version with CI
+- Publish new Gem Version with CD
 
 ## [1.1.1]
 
