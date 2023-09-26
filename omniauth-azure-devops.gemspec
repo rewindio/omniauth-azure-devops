@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = 'https://github.com/rewind/omniauth-azure-devops'
   gem.license       = 'MIT'
   gem.metadata = {
-    'rubygems_mfa_required' => 'true',
+    'rubygems_mfa_required' => 'false',
     'bug_tracker_uri' => "#{gem.homepage}/issues",
     'changelog_uri' => "#{gem.homepage}/blob/main/CHANGELOG.md",
     'documentation_uri' => gem.homepage.to_s,
