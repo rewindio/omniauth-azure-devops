@@ -17,7 +17,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   require 'omniauth'
-  require 'omniauth_azure_devops'
+  require 'omniauth-azure-devops'
   config.extend OmniAuth::Test::StrategyMacros, type: :strategy
   OmniAuth.config.test_mode = true
 
