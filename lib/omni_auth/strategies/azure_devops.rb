@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'omniauth/strategies/oauth2'
 
 module OmniAuth
@@ -37,7 +38,7 @@ module OmniAuth
 
       def token_params
         super.tap do |params|
-          params[:headers] = {'Content-Type': "application/x-www-form-urlencoded"}
+          params[:headers] = { 'Content-Type': 'application/x-www-form-urlencoded' }
           params[:client_assertion_type] = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'
           params[:client_assertion] = client.secret
           params[:grant_type] = 'urn:ietf:params:oauth:grant-type:jwt-bearer'

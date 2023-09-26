@@ -1,0 +1,52 @@
+name: Style Checks
+
+on: pull_request
+
+jobs:
+  changelog:
+    name: changelog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Get version
+        id: get_version
+        run: |
+          version_file=$(find ./lib -name version.rb)
+          version=$(grep VERSION $version_file |cut -f 2 -d= |tr -d \'|tr -d [:space:])
+          echo version=$version >> $GITHUB_OUTPUT
+          echo version_tag=v$version >> $GITHUB_OUTPUT
+
+      - name: validate changelog exists
+        env:
+          GEM_VERSION: ${{steps.get_version.outputs.version}}
+        run: |
+          error_code=0
+          grep "\[${GEM_VERSION}\]" CHANGELOG.md || error_code=$?
+
+          if [ "${error_code}" -eq 1 ]; then
+            echo "No changelog entry found for version ${GEM_VERSION}"
+            exit 1
+          fi
+
+  rubocop:
+    name: runner / rubocop
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+
+      - name: rubocop
+        uses: reviewdog/action-rubocop@e70b014b8062c447d6b515ee0209f834ea93e696 #v2.5.0
+        with:
+          rubocop_version: gemfile
+          rubocop_extensions: rubocop-performance:gemfile rubocop-rspec:gemfile
+          github_token: ${{ secrets.github_token }}
+          filter_mode: file
+          fail_on_error: true
