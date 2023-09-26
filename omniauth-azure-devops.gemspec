@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
 
   gem.summary       = 'An Azure Devops OAuth strategy for OmniAuth 2.0'
   gem.description   = 'An Azure Devops OAuth strategy for OmniAuth 2.0'
-  gem.homepage      = 'https://github.com/rewind/omniauth-azure-devops'
+  gem.homepage      = 'https://github.com/rewindio/omniauth-azure-devops'
   gem.license       = 'MIT'
   gem.metadata = {
     'rubygems_mfa_required' => 'false',
