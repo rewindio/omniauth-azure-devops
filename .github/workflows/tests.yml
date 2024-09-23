@@ -31,6 +31,9 @@ jobs:
 
   coverage:
     needs: rspec
-    uses: k1LoW/octocov-action@1ad702b3118b6a055c00b01db68ca0d9f6641dbc # v1.4.0
-    with:
-      config: .octocov.yml
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coverage report
+        uses: k1LoW/octocov-action@1ad702b3118b6a055c00b01db68ca0d9f6641dbc # v1.4.0
+        with:
+          config: .octocov.yml
