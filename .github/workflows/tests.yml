@@ -31,6 +31,6 @@ jobs:
 
   coverage:
     needs: rspec
-    uses: rewindio/github-action-common/.github/workflows/coverage.yml@v1
+    uses: k1LoW/octocov-action@1ad702b3118b6a055c00b01db68ca0d9f6641dbc # v1.4.0
     with:
-      fail_threshold: 100
+      config: .octocov.yml
