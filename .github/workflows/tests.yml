@@ -22,7 +22,7 @@ jobs:
 
 
     - name: Upload coverage results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         include-hidden-files: 'true'
         name: coverage-results
@@ -33,5 +33,13 @@ jobs:
     needs: rspec
     runs-on: ubuntu-latest
     steps:
+      - name: Download coverage results
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-results
+          path: app/coverage
+
       - name: Coverage report
         uses: k1LoW/octocov-action@1ad702b3118b6a055c00b01db68ca0d9f6641dbc # v1.4.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
