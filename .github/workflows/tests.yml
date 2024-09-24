@@ -33,6 +33,9 @@ jobs:
     needs: rspec
     runs-on: ubuntu-latest
     steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
       - name: Download coverage results
         uses: actions/download-artifact@v4
         with:
