@@ -22,25 +22,27 @@ jobs:
 
 
     - name: Upload coverage results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         include-hidden-files: 'true'
         name: coverage-results
         path: coverage
         retention-days: 5
+
   coverage:
     needs: rspec
     runs-on: ubuntu-latest
     steps:
-    - name: Download coverage results
-      uses: actions/download-artifact@v3
-      with:
-        name: coverage-results
-        path: coverage
+      - name: Check out code
+        uses: actions/checkout@v4
 
-    - name: Simplecov Report
-      uses: aki77/simplecov-report-action@7fd5fa551dd583dd437a11c640b2a1cf23d6cdaa   # v1.5.2
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        failedThreshold: 100
-        resultPath: coverage/.last_run.json
+      - name: Download coverage results
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-results
+          path: app/coverage
+
+      - name: Coverage report
+        uses: k1LoW/octocov-action@1ad702b3118b6a055c00b01db68ca0d9f6641dbc # v1.4.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
