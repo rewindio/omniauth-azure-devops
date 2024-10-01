@@ -1,7 +1,4 @@
 # Changelog
-## [1.0.3]
-
-- Validate new tag and release workflow
 
 ## [1.0.2]
 
