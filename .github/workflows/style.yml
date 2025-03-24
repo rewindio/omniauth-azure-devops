@@ -43,7 +43,7 @@ jobs:
           ruby-version: 3.2.2
 
       - name: rubocop
-        uses: reviewdog/action-rubocop@e70b014b8062c447d6b515ee0209f834ea93e696 #v2.5.0
+        uses: reviewdog/action-rubocop@fcb74ba274da10b18d038d0bcddaae3518739634 # v2.21.2
         with:
           rubocop_version: gemfile
           rubocop_extensions: rubocop-performance:gemfile rubocop-rspec:gemfile
