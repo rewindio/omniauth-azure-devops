@@ -22,7 +22,7 @@ jobs:
 
 
     - name: Upload coverage results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         include-hidden-files: 'true'
         name: coverage-results
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download coverage results
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: coverage-results
         path: coverage
