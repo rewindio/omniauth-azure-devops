@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.4]
+
+- Resolve CVE-2025-49007
+- Update dependencies
+
 ## [1.0.3]
 
 - Resolve CVE-2025-27111
